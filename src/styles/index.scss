@@ -1,0 +1,123 @@
+@import '~fonts/font-face.css';
+@import '~styles/variables';
+@import '~standalone/';
+
+body {
+  margin: 0;
+  font-family: $font-rg, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  height: 100vh;
+  /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  color: $black-blue;
+  line-height: 1.5;
+
+  #root {
+    height: 100%;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.page {
+  margin-top: $main-nav-topbar-height;
+  padding: 30px 30px;
+  max-width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  color: red;
+  display: flex;
+}
+
+form {
+  display: block;
+  flex: 1;
+
+  &>.input-container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &>div {
+      display: inline-block;
+      width: 100%;
+      border-left: 2px solid $grey-br;
+      padding-left: 10px;
+      font-size: 15px;
+      margin-right: 10px;
+
+      @media screen and (max-width: $mq-md) {
+        font-size: 10px;
+        margin-right: 5px;
+      }
+    }
+
+    &>input {
+      display: flex;
+      width: 100%;
+      margin-left: 10px;
+      border: none;
+      border-radius: $border-radius-sm;
+      height: 50px;
+      font-weight: $font-xbl;
+      font-size: 25px;
+      outline: none !important;
+      padding-left: 15px;
+      color: $black-blue;
+      background-color: rgba($grey-br, .6);
+      transition: .3s ease-in-out box-shadow;
+
+      @media screen and (max-width: $mq-md) {
+        height: 30px;
+        padding-left: 10px;
+        font-size: 15px;
+        margin-left: 5px;
+      }
+
+      &:hover {
+        opacity: 1;
+        box-shadow: $container-shadow-sm;
+      }
+    }
+  }
+}
+
+button {
+  font-family: $font-rg !important;
+  font-weight: 600;
+  text-align: right;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 2px solid $black-rg;
+  border-radius: $border-radius-sm;
+  background: none;
+
+  color: $black-rg;
+  font-size: 20px;
+
+  cursor: pointer;
+  transition: text-shadow .3s ease-in-out;
+
+  &>span {
+    font-size: 15px;
+  }
+
+  &:hover {
+    text-shadow: $text-shadow;
+  }
+}

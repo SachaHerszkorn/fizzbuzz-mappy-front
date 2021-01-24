@@ -1,0 +1,225 @@
+// Fonts
+$font-th: 'Proxima Nova Th';
+$font-rg: 'Proxima Nova RG';
+$font-bl: 'Proxima Nova Bl';
+$font-xbl: 'Proxima Nova XBl';
+
+// Media queries
+
+$mq-sm: 576px;
+$mq-md: 768px;
+$mq-lg: 992px;
+$mq-xl: 1200px;
+
+// Colors
+$white-br: #ffffff;
+$white-rg: #fafafa;
+$white-dr: #ececec;
+$white-alt: #f0f0f0;
+$white-blue: #eef8fd;
+$grey-br: #dddcdc;
+$grey-rg: #cacaca;
+$grey-dr: #c4c3c3;
+$grey-br-blue: #9a9dac;
+$grey-blue: #6f717e;
+$black-blue: #5d627c;
+$black-grey: #464545;
+$black-br: #313131;
+$black-rg: #202020;
+$black-dr: #0c0c0c;
+$black-alt: #382b22;
+$blue-alt: #bfddec;
+$blue-br: #8ec5e3;
+$blue-rg: #006DAF;
+$blue-dr: #154a70;
+$red-br: #df7373;
+$red-rg: #dd5a5a;
+$red-dr: #da4747;
+$green-br: #7eddb1;
+$green-rg: #4bae80;
+$green-dr: #319265;
+$border-color: $grey-br;
+$orange-rg: #ff8100;
+
+// Sizes
+$border-radius-sm: 5px;
+$border-radius-md: 10px;
+$border-radius-lg: 15px;
+$main-nav-topbar-height: 50px;
+
+
+// Shadows
+$text-shadow: 2px 2px 2px rgba(0, 0, 0, .19);
+$container-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12),
+0 1px 2px rgba(0, 0, 0, 0.24);
+$container-shadow-md: 0 10px 20px rgba(0, 0, 0, .19),
+0 6px 6px rgba(0, 0, 0, .23);
+$container-shadow-lg: 0 19px 38px rgba(0, 0, 0, 0.30),
+0 15px 12px rgba(0, 0, 0, 0.22);
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+@keyframes appearFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appearFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appearFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes appearFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes mysterious {
+  0% {
+    transform: rotate(-30deg);
+  }
+
+  30% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes appearRotate {
+  0% {
+    opacity: 0;
+    transform: rotate(1000deg) scale(0);
+    filter: blur(4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes appearDisappear {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+.mysterious {
+  animation-name: mysterious;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.appearDisappear {
+  animation-name: appearDisappear;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+
+}
+
+.appearRotate {
+  animation-name: appearRotate;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+.appearFrom {
+  animation-duration: .8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+
+  &.left {
+    animation-name: appearFromLeft;
+  }
+
+  &.right {
+    animation-name: appearFromRight;
+  }
+
+  &.bottom {
+    animation-name: appearFromBottom;
+  }
+
+  &.top {
+    animation-name: appearFromTop;
+  }
+
+}
+
+.appear {
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.disappear {
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+}
