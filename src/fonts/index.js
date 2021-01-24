@@ -1,0 +1,10 @@
+import './ProximaNova-Black.woff';
+import './ProximaNova-Black.woff2';
+import './ProximaNova-Bold.woff';
+import './ProximaNova-Bold.woff2';
+import './ProximaNova-Extrabld.woff';
+import './ProximaNova-Extrabld.woff2';
+import './ProximaNova-Regular.woff';
+import './ProximaNova-Regular.woff2';
+import './ProximaNovaT-Thin.woff';
+import './ProximaNovaT-Thin.woff2';
