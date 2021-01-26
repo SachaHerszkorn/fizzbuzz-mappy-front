@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = {
   development: 'http://localhost:5000/',
-  production: 'PRODUCTION_LINK',
+  production: 'https://catmashh-api.herokuapp.com/',
 };
 
 const requestMethods = {
