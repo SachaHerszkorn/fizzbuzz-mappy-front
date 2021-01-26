@@ -46,7 +46,7 @@ function FizzBuzz() {
         <div className="input-container">
           <div>
             Then type a number which will display your text if it is has a
-            corresponding multiple in the number sequencce
+            corresponding multiple in the number sequence
           </div>
           <input
             type="number"
